@@ -4,24 +4,24 @@
             var result = "凶"; // デフォルトの値
 
             if (colour === "黒" && number === 0) {
-                result = "小吉";
+                result = "犬";
             } else if (colour === "黒" && number === 1) {
-                result = "中吉";
+                result = "たぬき";
             } else if (colour === "黒" && number === 2) {
-                result = "凶";
+                result = "猫";
             } else if (colour === "白" && number === 0) {
-                result = "中吉";
+                result = "きつね";
             } else if (colour === "白" && number === 1) {
-                result = "中吉";
+                result = "くま";
             } else if (colour === "白" && number === 2) {
-                result = "大凶";
+                result = "ペンギン";
             } else if (colour === "オレンジ" && number === 0) {
-                result = "凶";
+                result = "カワウソ";
             } else if (colour === "オレンジ" && number === 1) {
-                result = "大吉";
+                result = "キリン";
             } else if (colour === "オレンジ" && number === 2) {
-                result = "中吉";
+                result = "ラクダ";
             }
 
-            document.getElementById('result-output').innerText = "あなたの今週の運勢は【" + result + "】です";
+            document.getElementById('result-output').innerText = "あなたのラッキー動物は【" + result + "】です";
         }
