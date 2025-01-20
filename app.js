@@ -29,9 +29,16 @@ function checkLucky(season, type) {
    }
    return `あなたのラッキーなものは【${result}】です`;
 }
-// 使用例（ここに選択肢を入力）
-const season = ""; // 季節を入力（例: "春", "夏", "秋", "冬"）
-const type = ""; // タイプを入力（例: "山", "海", "食べ物"）
-// 結果を取得して表示
-const luckyResult = checkLucky(season, type);
-console.log(luckyResult);
+// イベントリスナーを設定
+document.getElementById("check-result").addEventListener("click", function () {
+   const season = document.getElementById("season-select").value;
+   const type = document.getElementById("type-select").value;
+   // 選択肢が未選択の場合のチェック
+   if (!season || !type) {
+       document.getElementById("result-output").innerText = "すべての選択肢を選んでください。";
+       return;
+   }
+   // 結果を取得して表示
+   const luckyResult = checkLucky(season, type);
+   document.getElementById("result-output").innerText = luckyResult;
+});
