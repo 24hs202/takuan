@@ -24,41 +24,8 @@
 <option value="食べ物">食べ物</option>
 </select>
 <br><br>
-<button onclick="checkLucky()">結果を見る</button>
+<button id="check-result">結果を見る</button>
 <p id="result-output"></p>
-
-<script>
-       function checkLucky() {
-           var season = document.getElementById('season-select').value;
-           var type = document.getElementById('type-select').value;
-           var result = "ラッキーな結果なし"; // デフォルト値
-           if (season === "春" && type === "山") {
-               result = "桜";
-           } else if (season === "春" && type === "海") {
-               result = "潮風";
-           } else if (season === "春" && type === "食べ物") {
-               result = "たけのこ";
-           } else if (season === "夏" && type === "山") {
-               result = "避暑地";
-           } else if (season === "夏" && type === "海") {
-               result = "ビーチ";
-           } else if (season === "夏" && type === "食べ物") {
-               result = "かき氷";
-           } else if (season === "秋" && type === "山") {
-               result = "紅葉";
-           } else if (season === "秋" && type === "海") {
-               result = "秋刀魚";
-           } else if (season === "秋" && type === "食べ物") {
-               result = "栗";
-           } else if (season === "冬" && type === "山") {
-               result = "雪景色";
-           } else if (season === "冬" && type === "海") {
-               result = "波の音";
-           } else if (season === "冬" && type === "食べ物") {
-               result = "鍋料理";
-           }
-           document.getElementById('result-output').innerText = "あなたのラッキーなものは【" + result + "】です";
-       }
-  
+<script src="app.js"></script>
 </body>
 </html>
