@@ -1,5 +1,6 @@
 // 結果を計算して表示する関数
 function checkFortune() {
+   console.log("checkFortune 関数が呼び出されました");
    // HTMLから選択された値を取得
    const season = document.getElementById('season-select').value;
    const type = document.getElementById('type-select').value;
