@@ -1,44 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ビューポート設定を追加 -->
-<title>タイトル</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ラッキー結果チェッカー</title>
 </head>
-    
 <body>
-    <div class="container">
-        <body style="background-color:#f4b3c2;">
-        </body>body 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="pyscript.html">PyScriptVer</a>
-        <a href="cluster_analysis.html">ClusterAnalysis</a>
-    </nav>
-
-        <br>
-        <label for="colour-select">好きな色を選んでください：</label>
-        <select id="colour-select">
-            <option value="黒">黒</option>
-            <option value="白">白</option>
-            <option value="オレンジ">オレンジ</option>
-        </select>
-        <br>
-        <label for="number-input">好きな数字を選んでください（0、1、2）※半角数値で入力：</label>
-        <input type="number" id="number-input">
-        <br>
-        <button onclick="checkFortune()">運勢をチェック</button>
-        <p id="result-output"></p>
-        
-    <nav>
-     <a href="index.html">Home</a>
-      <a href="pyscript.html">PyScriptVer</a>
-      <a href="cluster_analysis.html">ClusterAnalysis</a>
-    </nav>
-    </div>    
-
-    <script src="app.js"></script>
+<h1>ラッキー結果チェッカー</h1>
+<label for="season-select">季節を選んでください:</label>
+<select id="season-select">
+<option value="">--選択してください--</option>
+<option value="春">春</option>
+<option value="夏">夏</option>
+<option value="秋">秋</option>
+<option value="冬">冬</option>
+</select>
+<br><br>
+<label for="type-select">タイプを選んでください:</label>
+<select id="type-select">
+<option value="">--選択してください--</option>
+<option value="山">山</option>
+<option value="海">海</option>
+<option value="食べ物">食べ物</option>
+</select>
+<br><br>
+<button onclick="checkLucky()">結果を見る</button>
+<p id="result-output"></p>
 
 </body>
 </html>
