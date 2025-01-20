@@ -1,7 +1,6 @@
 // ラッキー結果をチェックする関数
 function checkLucky(season, type) {
    let result = "ラッキーな結果なし"; // デフォルト値
-   // 条件に基づいて結果を決定
    if (season === "春" && type === "山") {
        result = "桜";
    } else if (season === "春" && type === "海") {
@@ -29,7 +28,7 @@ function checkLucky(season, type) {
    }
    return `あなたのラッキーなものは【${result}】です`;
 }
-// イベントリスナーを設定
+// ボタンのクリックイベントリスナーを設定
 document.getElementById("check-result").addEventListener("click", function () {
    const season = document.getElementById("season-select").value;
    const type = document.getElementById("type-select").value;
