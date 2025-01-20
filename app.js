@@ -1,4 +1,5 @@
  function checkFortune() {
+  console.log("checkFortune 関数が呼び出されました");
             var colour = document.getElementById('season-select').value;
             var number = parseInt(document.getElementById('type-input').value, 10);
             var result = "結果なし"; // デフォルトの値
