@@ -1,6 +1,10 @@
-// ラッキー結果をチェックする関数
-function checkLucky(season, type) {
-   let result = "ラッキーな結果なし"; // デフォルト値
+ function checkFortune() {
+            var colour = document.getElementById('season-select').value;
+            var number = parseInt(document.getElementById('type-input').value, 10);
+            var result = "結果なし"; // デフォルトの値
+
+
+
    if (season === "春" && type === "山") {
        result = "桜";
    } else if (season === "春" && type === "海") {
@@ -26,18 +30,5 @@ function checkLucky(season, type) {
    } else if (season === "冬" && type === "食べ物") {
        result = "鍋料理";
    }
-   return `あなたのラッキーなものは【${result}】です`;
-}
-// ボタンのクリックイベントリスナーを設定
-document.getElementById("check-result").addEventListener("click", function () {
-   const season = document.getElementById("season-select").value;
-   const type = document.getElementById("type-select").value;
-   // 選択肢が未選択の場合のチェック
-   if (!season || !type) {
-       document.getElementById("result-output").innerText = "すべての選択肢を選んでください。";
-       return;
-   }
-   // 結果を取得して表示
-   const luckyResult = checkLucky(season, type);
-   document.getElementById("result-output").innerText = luckyResult;
-});
+    document.getElemenById('result-output').innerText = "あなたの今日の運勢は【" + result + "】です";
+ }
