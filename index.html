@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ラッキー結果チェッカー</title>
+<title>あなたのおすすめは？</title>
 <style>
   body {
     text-align: center;
@@ -50,7 +50,7 @@
 </style>
 </head>
 <body>
-<h1>ラッキー結果チェッカー</h1>
+<h1>あなたのおすすめは？</h1>
   <br><br>
 <!-- 季節の選択 -->
 <label for="season-select">季節を選んでください:</label>
@@ -83,32 +83,32 @@
     let result = "結果なし"; // デフォルト値
 
     if (season === "春" && type === "山") {
-      result = "桜";
+      result = "お花見";
     } else if (season === "春" && type === "海") {
-      result = "潮風";
+      result = "海岸で散歩";
     } else if (season === "春" && type === "食べ物") {
-      result = "たけのこ";
+      result = "タケノコご飯";
     } else if (season === "夏" && type === "山") {
-      result = "避暑地";
+      result = "キャンプ";
     } else if (season === "夏" && type === "海") {
-      result = "ビーチ";
+      result = "海水浴j";
     } else if (season === "夏" && type === "食べ物") {
       result = "かき氷";
     } else if (season === "秋" && type === "山") {
       result = "紅葉";
     } else if (season === "秋" && type === "海") {
-      result = "秋刀魚";
+      result = "夕日";
     } else if (season === "秋" && type === "食べ物") {
-      result = "栗";
+      result = "栗ご飯";
     } else if (season === "冬" && type === "山") {
-      result = "雪景色";
+      result = "スキー";
     } else if (season === "冬" && type === "海") {
-      result = "波の音";
+      result = "日の出";
     } else if (season === "冬" && type === "食べ物") {
       result = "鍋料理";
     }
 
-    document.getElementById('result-output').innerText = "あなたの今日の運勢は【" + result + "】です";
+    document.getElementById('result-output').innerText = "あなたにおすすめするものは【" + result + "】です";
   }
 
   // ボタンのクリックイベントに関数を紐付け
