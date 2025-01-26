@@ -4,32 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ラッキー結果チェッカー</title>
+<style>
+  body {
+    text-align: center;
+    background-color: #FFB7C5; /* 桜色 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: #FFD700; /* 黄色 */
+    background-color: #FFE4B5; /* 薄いオレンジ */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+
+  label, select, button, p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  button {
+    color: white;
+    background-color: #87CEEB; /* 空色 */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #00BFFF; /* 濃い空色 */
+  }
+
+  #result-output {
+    font-size: 18px; /* 大きめの文字サイズ */
+    font-weight: bold;
+  }
+</style>
 </head>
 <body>
 <h1>ラッキー結果チェッカー</h1>
 <!-- 季節の選択 -->
 <label for="season-select">季節を選んでください:</label>
 <select id="season-select">
-<option value="">--選択してください--</option>
-<option value="春">春</option>
-<option value="夏">夏</option>
-<option value="秋">秋</option>
-<option value="冬">冬</option>
+  <option value="">--選択してください--</option>
+  <option value="春">春</option>
+  <option value="夏">夏</option>
+  <option value="秋">秋</option>
+  <option value="冬">冬</option>
 </select>
 <br><br>
 <!-- タイプの選択 -->
 <label for="type-select">タイプを選んでください:</label>
 <select id="type-select">
-<option value="">--選択してください--</option>
-<option value="山">山</option>
-<option value="海">海</option>
-<option value="食べ物">食べ物</option>
+  <option value="">--選択してください--</option>
+  <option value="山">山</option>
+  <option value="海">海</option>
+  <option value="食べ物">食べ物</option>
 </select>
 <br><br>
 <!-- 結果表示 -->
 <button id="check-result">結果を見る</button>
 <p id="result-output"></p>
 <!-- JavaScriptファイルの読み込み -->
-<script src="app.js"></script>
+<script>
+  // 結果を計算して表示する関数
+  function checkFortune() {
+    const season = document.getElementById('season-select').value;
+    const type = document.getElementById('type-select').value;
+    let result = "結果なし"; // デフォルト値
+
+    if (season === "春" && type === "山") {
+      result = "桜";
+    } else if (season === "春" && type === "海") {
+      result = "潮風";
+    } else if (season === "春" && type === "食べ物") {
+      result = "たけのこ";
+    } else if (season === "夏" && type === "山") {
+      result = "避暑地";
+    } else if (season === "夏" && type === "海") {
+      result = "ビーチ";
+    } else if (season === "夏" && type === "食べ物") {
+      result = "かき氷";
+    } else if (season === "秋" && type === "山") {
+      result = "紅葉";
+    } else if (season === "秋" && type === "海") {
+      result = "秋刀魚";
+    } else if (season === "秋" && type === "食べ物") {
+      result = "栗";
+    } else if (season === "冬" && type === "山") {
+      result = "雪景色";
+    } else if (season === "冬" && type === "海") {
+      result = "波の音";
+    } else if (season === "冬" && type === "食べ物") {
+      result = "鍋料理";
+    }
+
+    document.getElementById('result-output').innerText = "あなたの今日の運勢は【" + result + "】です";
+  }
+
+  // ボタンのクリックイベントに関数を紐付け
+  document.getElementById('check-result').addEventListener('click', checkFortune);
+</script>
 </body>
 </html>
+
